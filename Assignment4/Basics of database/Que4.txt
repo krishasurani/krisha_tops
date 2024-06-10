@@ -1,0 +1,6 @@
+•What is MF Cod Rule of RDBMS Systems?  
+Ans : Codd’s twelve rules are a set thirteen rules (numbered zero to 
+twelve) proposed by Edgar F.codd, a pioneer of the relational model 
+for database, designed to define what is required from a database 
+management system in order for it to be considered relation, i.e.,a 
+relational database management system (RDMS). 
