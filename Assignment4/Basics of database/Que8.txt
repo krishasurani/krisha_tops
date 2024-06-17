@@ -5,3 +5,26 @@ Constraints are used to limit the type of data that can go into a table.
 This ensures the accuracy and reliability of the data in the table. If 
 there is any violation between the constraint and the data action, 
 the action is aborted.
+==>There are several types of key constraints, including:
+1.Primary Key: Ensures that a column (or a set of columns) has unique values and that no NULL values are allowed.
+Each table can have only one primary key.
+2.Foreign Key: Ensures that the values in a column (or a set of columns) match values in another table's primary key column(s),
+establishing a relationship between the tables.
+3.Unique Key: Ensures that all values in a column (or a set of columns) are unique.
+4.Not Null: Ensures that a column cannot have NULL values.
+Exmple>>
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY,  -- Primary key constraint
+    Username VARCHAR(50) UNIQUE,  -- Unique key constraint
+    Email VARCHAR(100) NOT NULL  -- Not null constraint
+);
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,  -- Primary key constraint
+    OrderDate DATE NOT NULL,  -- Not null constraint
+    UserID INT,  -- Foreign key column
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)  -- Foreign key constraint
+);
+INSERT INTO Users (UserID, Username, Email) VALUES (1, 'john_doe', 'john.doe@example.com');
+INSERT INTO Users (UserID, Username, Email) VALUES (2, 'jane_smith', 'jane.smith@example.com');
+INSERT INTO Orders (OrderID, OrderDate, UserID) VALUES (1, '2023-06-01', 1);
+INSERT INTO Orders (OrderID, OrderDate, UserID) VALUES (2, '2023-06-02', 2);
