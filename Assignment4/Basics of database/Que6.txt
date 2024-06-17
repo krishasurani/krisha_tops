@@ -1,6 +1,0 @@
-•What is DDL Interpreter? 
-Ans : DDL Interpreter: It processes the DDL statements into a set of 
-table containing meta data (Data about data). Embedded DML Pre
-compiler: It processes DML statements embedded in an application 
-program into procedural calls. Query Optimizer: It executes the 
-instruction generation by DML compiler.

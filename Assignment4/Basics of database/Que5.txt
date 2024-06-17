@@ -1,6 +1,0 @@
-•What do you understand By Data Redundancy?  
-Ans : Data redundancy occurs when the same piece of data exists in 
-multiple places, whereas data inconsistency is when the same data in 
-different formats in multiple tables. Unfortunately, data redundancy 
-can cause data inconsistency, which can provide a company with 
-unreliable and meaningless information. 
