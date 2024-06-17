@@ -1,0 +1,68 @@
+•What is MF Cod Rule of RDBMS Systems?  
+Ans : Codd’s twelve rules are a set thirteen rules (numbered zero to 
+twelve) proposed by Edgar F.codd, a pioneer of the relational model 
+for database, designed to define what is required from a database 
+management system in order for it to be considered relation, i.e.,a 
+relational database management system (RDMS). 
+
+Rule 0: Foundation Rule
+For any system that is advertised as, or claimed to be, a relational database management system, that 
+system must be able to manage databases entirely through its relational capabilities.
+
+Rule 1: Information Rule
+All information in a relational database is represented explicitly at the logical level and in exactly 
+one way: by values in tables.
+
+Rule 2: Guaranteed Access Rule
+Each and every datum (atomic value) is guaranteed to be logically accessible by resorting to a 
+combination of table name, primary key value, and column name.
+
+Rule 3: Systematic Treatment of Null Values
+Null values (distinct from empty character strings or a string of blank characters and distinct from zero 
+or any other number) are supported in fully relational DBMS for representing missing or inapplicable 
+information in a systematic way, independent of data type.
+
+Rule 4: Dynamic Online Catalog Based on the Relational Model
+The database description is represented at the logical level in the same way as ordinary data, so 
+authorized users can apply the same relational language to its interrogation as they apply to regular 
+data.
+
+Rule 5: Comprehensive Data Sublanguage Rule
+A relational system may support several languages and various modes of terminal use (for example, the 
+fill-in-blanks mode). However, there must be at least one language whose statements are expressible as 
+character strings and that is comprehensive in supporting all the following items:
+Data definition
+Data manipulation (both interactive and by program)
+Data integrity constraints
+Authorization
+Transaction boundaries (begin, commit, and rollback)
+
+Rule 6: View Updating Rule
+All views that are theoretically updatable must be updatable by the system.
+
+Rule 7: High-Level Insert, Update, and Delete
+The capability of handling a base relation or a derived relation as a single operand applies not only to 
+the retrieval of data but also to the insertion, update, and deletion of data.
+
+Rule 8: Physical Data Independence
+Application programs and terminal activities remain logically unimpaired whenever any changes are made in 
+either storage representations or access methods.
+
+Rule 9: Logical Data Independence
+Application programs and terminal activities remain logically unimpaired when information-preserving 
+changes of any kind that theoretically permit un-impairment are made to the base tables.
+
+Rule 10: Integrity Independence
+Integrity constraints specific to a particular relational database must be definable in the relational 
+data sublanguage and storable in the catalog, not in the application programs.
+
+Rule 11: Distribution Independence
+A relational DBMS has distribution independence, which means that the end-users should not be able to see 
+that the data is distributed over various locations. Users should always get the impression that the data 
+is located at one site only.
+
+Rule 12: Non-Subversion Rule
+If a relational system has a low-level (single-record-at-a-time) interface, that interface cannot be used 
+to subvert the system’s integrity constraints and logical data independence.
+These rules were intended to ensure that a system can be qualified as a true RDBMS and to provide a 
+benchmark against which to compare other systems.

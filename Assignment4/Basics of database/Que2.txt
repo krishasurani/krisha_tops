@@ -1,0 +1,31 @@
+• What is Normalization?  
+Ans : Normalization is a database design technique data redundancy 
+and eliminates undesirable characteristics like insertion, Update and 
+Deletion Anomalies. Normalization rules divides larger tables into 
+smaller table and links them using relationship. The purpose of 
+Normalisation in SQL is to eliminate redundant (repetitive) data and 
+ensure data is stored logically. 
+
+There are several levels of normalization, each with its own set of rules:
+
+1. First Normal Form (1NF):
+Eliminates repeating groups:
+
+
+2. Second Normal Form (2NF):
+Must be in 1NF.
+Eliminates partial dependencies
+
+3. Third Normal Form (3NF)
+Must be in 2NF.
+Eliminates transitive dependencies
+Additional Normal Forms
+
+Boyce-Codd Normal Form (BCNF): A stricter versi
+Fourth Normal Form (4NF): Eliminates multi-valued dependencies
+Fifth Normal Form (5NF): Eliminates all join dependencies
+
+Benefits of Normalization:
+Reduced data redundancy
+Improved data integrity
+Enhanced data efficiency

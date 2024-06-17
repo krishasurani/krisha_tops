@@ -1,0 +1,73 @@
+Create Table Name : Student and Exam
+
+CREATE TABLE Student (
+  Rollno int PRIMARY KEY,
+  Name varchar(255) NOT NULL,
+  Branch varchar(255) NOT NULL
+);
+
+ describe student;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| Rollno | int          | NO   | PRI | NULL    |       |
+| Name   | varchar(255) | NO   |     | NULL    |       |
+| Branch | varchar(255) | NO   |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+
+CREATE TABLE Exam (
+  Rollno int,
+  S_code varchar(255) NOT NULL,
+  Marks int,
+  P_code varchar(255) NOT NULL,
+  FOREIGN KEY (Rollno) REFERENCES Student(Rollno)
+);
+
+ describe exam;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| Rollno | int          | YES  | MUL | NULL    |       |
+| S_code | varchar(255) | NO   |     | NULL    |       |
+| Marks  | int          | YES  |     | NULL    |       |
+| P_code | varchar(255) | NO   |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+
+INSERT INTO Student (Rollno, Name, Branch) VALUES
+  (101, 'Alice', 'Computer Science'),
+  (102, 'Bob', 'Mathematics'),
+  (103, 'Charlie', 'Physics'),
+  (104, 'Diana', 'Chemistry'),
+  (105, 'Eve', 'Biology');
+
+select * from student;
++--------+---------+------------------+
+| Rollno | Name    | Branch           |
++--------+---------+------------------+
+|    101 | Alice   | Computer Science |
+|    102 | Bob     | Mathematics      |
+|    103 | Charlie | Physics          |
+|    104 | Diana   | Chemistry        |
+|    105 | Eve     | Biology          |
++--------+---------+------------------+
+ 
+  INSERT INTO Exam (Rollno, S_code, Marks, P_code) VALUES
+  (101, 'CS101', 85, 'Prof. Smith'),
+  (101, 'MATH202', 90, 'Prof. Jones'),
+  (102, 'MATH303', 78, 'Prof. Miller'),
+  (103, 'PHY104', 95, 'Prof. Brown'),
+  (104, 'CHEM205', 82, 'Prof. Lee'),
+  (105, 'BIO306', 70, 'Prof. Garcia');
+
+ mysql> select * from exam;
++--------+---------+-------+--------------+
+| Rollno | S_code  | Marks | P_code       |
++--------+---------+-------+--------------+
+|    101 | CS101   |    85 | Prof. Smith  |
+|    101 | MATH202 |    90 | Prof. Jones  |
+|    102 | MATH303 |    78 | Prof. Miller |
+|    103 | PHY104  |    95 | Prof. Brown  |
+|    104 | CHEM205 |    82 | Prof. Lee    |
+|    105 | BIO306  |    70 | Prof. Garcia |
++--------+---------+-------+--------------+
+
